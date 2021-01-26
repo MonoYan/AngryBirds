@@ -10,18 +10,28 @@ public class Birds : MonoBehaviour
 
     private bool onBirds = false;
     private bool noClick = false;
-    public SpringJoint2D springJoint2D;
+    private SpringJoint2D sj;
+    private Rigidbody2D rb;
 
+    private void Awake()
+    {
+        sj = GetComponent<SpringJoint2D>();
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void OnMouseDown() //当鼠标按下
     {
-        isCLick = true;    
+        isCLick = true;
+        rb.isKinematic = true;
     }
 
     private void OnMouseUp() //当鼠标弹起
     {
         isCLick = false;
         noClick = true;
+        rb.isKinematic = false;
+        Invoke("Fly", 0.1f);
+
     }
 
     private void Update()
@@ -42,9 +52,10 @@ public class Birds : MonoBehaviour
             onBirds = true;
         }
 
-        if (noClick && onBirds) {
-            Destroy(springJoint2D);
-        }
+    }
 
+    void Fly() 
+    {
+        sj.enabled = false;
     }
 }
