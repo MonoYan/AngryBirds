@@ -18,6 +18,10 @@
 - [ ] 关卡选择
 - [ ] 数据存储
 
+# Preview
+
+![目前效果](Readme/Preview1.gif)
+
 # License
 
 MIT

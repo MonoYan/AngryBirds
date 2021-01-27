@@ -42,9 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Environment
+    uniqueID: 816372927
+    locked: 0
   - name: Player
     uniqueID: 974563659
     locked: 0
   - name: BackGround
     uniqueID: 1665677787
+    locked: 0
+  - name: Block
+    uniqueID: 3529129613
+    locked: 0
+  - name: Score
+    uniqueID: 1314931123
     locked: 0
