@@ -10,12 +10,12 @@ public class Birds : MonoBehaviour
     public Transform rightPos;
     public Transform leftPos;
 
-    private SpringJoint2D sj;
+    [HideInInspector] public SpringJoint2D sj;
     private Rigidbody2D rb;
 
     public LineRenderer lrRight;
     public LineRenderer lrLeft;
-
+    public GameObject boom;
     
 
     private void Awake()
@@ -35,7 +35,9 @@ public class Birds : MonoBehaviour
         isCLick = false;
         rb.isKinematic = false;
         Invoke("Fly", 0.1f);
-
+        //禁用划线组件，使得看起来更顺滑
+        lrLeft.enabled = false;
+        lrRight.enabled = false;
     }
 
     private void Update()
@@ -57,18 +59,37 @@ public class Birds : MonoBehaviour
         }
 
     }
-
-    void Fly() 
+    /// <summary>
+    /// 飞行
+    /// </summary>
+    void Fly() //使SpriteJoint失活达到飞行功能
     {
         sj.enabled = false;
+        Invoke("Next", 3);
     }
 
+    /// <summary>
+    /// 皮筋儿绘制
+    /// </summary>
     void Line() 
     {
+        lrRight.enabled = true;
+        lrRight.enabled = true;
         lrRight.SetPosition(0, rightPos.position);
         lrRight.SetPosition(1, transform.position);
 
         lrLeft.SetPosition(0, leftPos.position);
         lrLeft.SetPosition(1, transform.position);
+    }
+
+    /// <summary>
+    /// 下一只小鸟飞出
+    /// </summary>
+    void Next() 
+    {
+        GameManager._instance.birds.Remove(this);
+        Destroy(gameObject);
+        Instantiate(boom, transform.position, Quaternion.identity);
+        GameManager._instance.NextBirds();
     }
 }
