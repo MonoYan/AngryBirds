@@ -16,12 +16,15 @@ public class Birds : MonoBehaviour
     public LineRenderer lrRight;
     public LineRenderer lrLeft;
     public GameObject boom;
+
+    private Trail myTrail;
     
 
     private void Awake()
     {
         sj = GetComponent<SpringJoint2D>();
         rb = GetComponent<Rigidbody2D>();
+        myTrail = GetComponent<Trail>();
     }
 
     private void OnMouseDown() //当鼠标按下
@@ -64,6 +67,7 @@ public class Birds : MonoBehaviour
     /// </summary>
     void Fly() //使SpriteJoint失活达到飞行功能
     {
+        myTrail.StartTrail(); //飞行时播放特效
         sj.enabled = false;
         Invoke("Next", 3);
     }
@@ -91,5 +95,10 @@ public class Birds : MonoBehaviour
         Destroy(gameObject);
         Instantiate(boom, transform.position, Quaternion.identity);
         GameManager._instance.NextBirds();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        myTrail.ClearTrail();//消除拖尾
     }
 }
