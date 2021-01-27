@@ -6,8 +6,10 @@ public class Pig : MonoBehaviour
 {
     public float maxSpeed = 10f;
     public float minSpeed = 5f;
+
     private SpriteRenderer render;
     public Sprite hunted;
+    public GameObject boom;
 
     private void Awake()
     {
@@ -17,16 +19,18 @@ public class Pig : MonoBehaviour
     {
         if (collision.relativeVelocity.magnitude > maxSpeed)
         {
-            Destroy(gameObject);
+            DeadEffect();
         }
         else if (collision.relativeVelocity.magnitude < maxSpeed && collision.relativeVelocity.magnitude > minSpeed)
         {
             render.sprite = hunted;
+            DeadEffect();
         }
     }
 
-    private void OnTriggerEnter(Collider other) //触发检测
-    {
-        
+    public void DeadEffect() {
+        Destroy(gameObject);
+        Instantiate(boom, transform.position, Quaternion.identity);
     }
+    //private void OnTriggerEnter(Collider other) //触发检测 {}
 }

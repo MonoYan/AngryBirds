@@ -2169,8 +2169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2256303acf8ec4cba62a4c6defc115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightPos: {fileID: 835676159}
   maxDis: 1.25
+  rightPos: {fileID: 835676159}
+  leftPos: {fileID: 1158469692}
+  lrRight: {fileID: 835676160}
+  lrLeft: {fileID: 1158469693}
 --- !u!58 &1645114564
 CircleCollider2D:
   m_ObjectHideFlags: 0
