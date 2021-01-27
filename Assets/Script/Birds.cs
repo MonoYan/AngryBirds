@@ -5,13 +5,18 @@ using UnityEngine;
 public class Birds : MonoBehaviour
 {
     private bool isCLick = false;
-    public Transform rightPos;
     public float maxDis = 1.25f;
 
-    private bool onBirds = false;
-    private bool noClick = false;
+    public Transform rightPos;
+    public Transform leftPos;
+
     private SpringJoint2D sj;
     private Rigidbody2D rb;
+
+    public LineRenderer lrRight;
+    public LineRenderer lrLeft;
+
+    
 
     private void Awake()
     {
@@ -28,7 +33,6 @@ public class Birds : MonoBehaviour
     private void OnMouseUp() //当鼠标弹起
     {
         isCLick = false;
-        noClick = true;
         rb.isKinematic = false;
         Invoke("Fly", 0.1f);
 
@@ -49,7 +53,7 @@ public class Birds : MonoBehaviour
 
             }
 
-            onBirds = true;
+            Line();
         }
 
     }
@@ -57,5 +61,14 @@ public class Birds : MonoBehaviour
     void Fly() 
     {
         sj.enabled = false;
+    }
+
+    void Line() 
+    {
+        lrRight.SetPosition(0, rightPos.position);
+        lrRight.SetPosition(1, transform.position);
+
+        lrLeft.SetPosition(0, leftPos.position);
+        lrLeft.SetPosition(1, transform.position);
     }
 }
