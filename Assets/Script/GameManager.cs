@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public List<Birds> birds;
     public List<Pig> pigs;
+    public GameObject[] stars;
     public static GameManager _instance;
     private Vector3 originPos; //初始化的位置
 
@@ -69,6 +70,14 @@ public class GameManager : MonoBehaviour
 
     public void ShowStarts() 
     {
-        
+        StartCoroutine("Show");
+    }
+
+    IEnumerator Show() {
+        for (int i = 0; i < birds.Count ; i++)
+        {
+            yield return new WaitForSeconds(0.2f);
+            stars[i].SetActive(true);
+        }
     }
 }

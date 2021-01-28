@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -765837683
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -5171588462322538318, guid: 6fc5c4a1809ae65459d55a429dbedbeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93dd03602deee0d4cac1703dbf468261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 6
-  minSpeed: 3
+  maxSpeed: 4
+  minSpeed: 2
   isPig: 0
   hunted: {fileID: 4062100315826251287, guid: 6fc5c4a1809ae65459d55a429dbedbeb, type: 3}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
