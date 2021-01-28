@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager _instance;
     private Vector3 originPos; //初始化的位置
 
+    public GameObject win;
+    public GameObject lose;
+
     private void Awake()
     {
         _instance = this;
@@ -55,12 +58,17 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                //失败
+                lose.SetActive(true);
             }
         }
         else
         {
-                
+            win.SetActive(true);
         }
+    }
+
+    public void ShowStarts() 
+    {
+        
     }
 }
