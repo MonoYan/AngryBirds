@@ -18,6 +18,7 @@ public class Birds : MonoBehaviour
     public GameObject boom;
 
     private Trail myTrail;
+    private bool canMove = true;
     
 
     private void Awake()
@@ -29,18 +30,25 @@ public class Birds : MonoBehaviour
 
     private void OnMouseDown() //当鼠标按下
     {
-        isCLick = true;
-        rb.isKinematic = true;
+        if (canMove)
+        {
+            isCLick = true;
+            rb.isKinematic = true;
+        }
     }
 
     private void OnMouseUp() //当鼠标弹起
     {
-        isCLick = false;
-        rb.isKinematic = false;
-        Invoke("Fly", 0.1f);
-        //禁用划线组件，使得看起来更顺滑
-        lrLeft.enabled = false;
-        lrRight.enabled = false;
+        if (canMove)
+        {
+            isCLick = false;
+            rb.isKinematic = false;
+            Invoke("Fly", 0.1f);
+            //禁用划线组件，使得看起来更顺滑
+            lrLeft.enabled = false;
+            lrRight.enabled = false;
+            canMove = false;
+        }
     }
 
     private void Update()
