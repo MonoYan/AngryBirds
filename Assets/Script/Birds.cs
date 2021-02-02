@@ -26,6 +26,8 @@ public class Birds : MonoBehaviour
 
     private bool isFly = false;
 
+    public Sprite hurt;
+    private SpriteRenderer render;
 
 
     private void Awake()
@@ -33,6 +35,7 @@ public class Birds : MonoBehaviour
         sj = GetComponent<SpringJoint2D>();
         rb = GetComponent<Rigidbody2D>();
         myTrail = GetComponent<Trail>();
+        render = GetComponent<SpriteRenderer>();
 
     }
 
@@ -133,6 +136,7 @@ public class Birds : MonoBehaviour
     {
         isFly = false;
         myTrail.ClearTrail();//消除拖尾
+        
     }
 
     public void AudioPlay(AudioClip clip) 
@@ -146,5 +150,10 @@ public class Birds : MonoBehaviour
     {
         isFly = false;
 
+    }
+
+    public void Hurt() 
+    {
+        render.sprite = hurt;
     }
 }
