@@ -11,7 +11,7 @@ public class Birds : MonoBehaviour
     public Transform leftPos;
 
     [HideInInspector] public SpringJoint2D sj;
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     public LineRenderer lrRight;
     public LineRenderer lrLeft;
@@ -24,6 +24,8 @@ public class Birds : MonoBehaviour
     public AudioClip select;
     public AudioClip fly;
 
+    private bool isFly = false;
+
 
 
     private void Awake()
@@ -31,6 +33,7 @@ public class Birds : MonoBehaviour
         sj = GetComponent<SpringJoint2D>();
         rb = GetComponent<Rigidbody2D>();
         myTrail = GetComponent<Trail>();
+
     }
 
     private void OnMouseDown() //当鼠标按下
@@ -73,12 +76,20 @@ public class Birds : MonoBehaviour
             }
 
             Line();
+
         }
 
         //相机跟随，通过改变camera的X
         float posXCamera = transform.position.x;
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position,new Vector3(Mathf.Clamp(posXCamera,0, 20),Camera.main.transform.position.y,Camera.main.transform.position.z), smooth * Time.deltaTime);
 
+        if (isFly)
+        {
+            if (Input.GetMouseButtonDown(0)) // 0 1 2 分别对应 左 中 右
+            {
+                ShowSkill();
+            }
+        }
 
     }
     /// <summary>
@@ -86,6 +97,7 @@ public class Birds : MonoBehaviour
     /// </summary>
     void Fly() //使SpriteJoint失活达到飞行功能   
     {
+        isFly = true;
         AudioPlay(fly);
         myTrail.StartTrail(); //飞行时播放特效
         sj.enabled = false;
@@ -119,11 +131,20 @@ public class Birds : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        isFly = false;
         myTrail.ClearTrail();//消除拖尾
     }
 
     public void AudioPlay(AudioClip clip) 
     {
         AudioSource.PlayClipAtPoint(clip, transform.position);
+    }
+    /// <summary>
+    /// 黄鸟技能
+    /// </summary>
+    public virtual void  ShowSkill() 
+    {
+        isFly = false;
+
     }
 }
