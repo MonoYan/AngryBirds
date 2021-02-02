@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager _instance;
     private Vector3 originPos; //初始化的位置
 
+    public GameObject PausePanel;
     public GameObject win;
     public GameObject lose;
 
@@ -60,11 +61,13 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                PausePanel.SetActive(false);
                 lose.SetActive(true);
             }
         }
         else
         {
+            PausePanel.SetActive(false);
             win.SetActive(true);
         }
     }
@@ -85,6 +88,7 @@ public class GameManager : MonoBehaviour
     public void Replay() 
     {
         SceneManager.LoadScene(2);
+        
     }
 
     public void Home() {
