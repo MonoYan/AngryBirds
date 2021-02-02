@@ -19,7 +19,9 @@ public class Birds : MonoBehaviour
 
     private Trail myTrail;
     private bool canMove = true;
-    
+    private float smooth = 3;   
+
+
 
     private void Awake()
     {
@@ -69,11 +71,16 @@ public class Birds : MonoBehaviour
             Line();
         }
 
+        //相机跟随，通过改变camera的X
+        float posXCamera = transform.position.x;
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position,new Vector3(Mathf.Clamp(posXCamera,0, 20),Camera.main.transform.position.y,Camera.main.transform.position.z), smooth * Time.deltaTime);
+
+
     }
     /// <summary>
     /// 飞行
     /// </summary>
-    void Fly() //使SpriteJoint失活达到飞行功能
+    void Fly() //使SpriteJoint失活达到飞行功能   
     {
         myTrail.StartTrail(); //飞行时播放特效
         sj.enabled = false;
