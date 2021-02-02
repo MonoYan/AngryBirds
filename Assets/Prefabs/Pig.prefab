@@ -140,3 +140,6 @@ MonoBehaviour:
   hunted: {fileID: -8281071825006879847, guid: efff5e452cd141b428bc7679fbc1de63, type: 3}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
   score: {fileID: 5950572973599463600, guid: bbffec956de3dde47a88d8923c872827, type: 3}
+  dead: {fileID: 8300000, guid: 8382187dbd0356245bd8260b6f23cc30, type: 3}
+  hurtAudio: {fileID: 8300000, guid: e2b5711976265c743806848a85a957fe, type: 3}
+  birdCollision: {fileID: 8300000, guid: 43265160311ec01479a8f9b11a464dcd, type: 3}

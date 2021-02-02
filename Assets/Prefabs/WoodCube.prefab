@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -765837683
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7388815443124255523, guid: 6fc5c4a1809ae65459d55a429dbedbeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -103,6 +103,9 @@ MonoBehaviour:
   hunted: {fileID: -5816911033326071667, guid: 6fc5c4a1809ae65459d55a429dbedbeb, type: 3}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
   score: {fileID: 8870148822689293650, guid: 9730a45add7a5dc4ebe72b39a61af90f, type: 3}
+  dead: {fileID: 8300000, guid: 9a928c9c44998a940b9d6a8cb43262b7, type: 3}
+  hurtAudio: {fileID: 8300000, guid: 2656e3800a562a94199a4f2a1ce02e25, type: 3}
+  birdCollision: {fileID: 8300000, guid: 43265160311ec01479a8f9b11a464dcd, type: 3}
 --- !u!50 &8485845273830779703
 Rigidbody2D:
   serializedVersion: 4

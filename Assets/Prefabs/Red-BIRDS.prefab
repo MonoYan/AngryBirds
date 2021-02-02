@@ -266,6 +266,8 @@ MonoBehaviour:
   lrRight: {fileID: 0}
   lrLeft: {fileID: 0}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
+  select: {fileID: 8300000, guid: 6f8ab9bcc561b3f4b9515a9a06e1af51, type: 3}
+  fly: {fileID: 8300000, guid: 31431c8dca3ccf14ea09281edbb49216, type: 3}
 --- !u!114 &9107357663852375186
 MonoBehaviour:
   m_ObjectHideFlags: 0

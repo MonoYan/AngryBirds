@@ -19,7 +19,10 @@ public class Birds : MonoBehaviour
 
     private Trail myTrail;
     private bool canMove = true;
-    private float smooth = 3;   
+    private float smooth = 3;
+
+    public AudioClip select;
+    public AudioClip fly;
 
 
 
@@ -34,6 +37,7 @@ public class Birds : MonoBehaviour
     {
         if (canMove)
         {
+            AudioPlay(select);
             isCLick = true;
             rb.isKinematic = true;
         }
@@ -82,6 +86,7 @@ public class Birds : MonoBehaviour
     /// </summary>
     void Fly() //使SpriteJoint失活达到飞行功能   
     {
+        AudioPlay(fly);
         myTrail.StartTrail(); //飞行时播放特效
         sj.enabled = false;
         Invoke("Next", 3);
@@ -115,5 +120,10 @@ public class Birds : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         myTrail.ClearTrail();//消除拖尾
+    }
+
+    public void AudioPlay(AudioClip clip) 
+    {
+        AudioSource.PlayClipAtPoint(clip, transform.position);
     }
 }

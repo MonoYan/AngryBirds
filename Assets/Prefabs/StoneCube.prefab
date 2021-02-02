@@ -103,6 +103,9 @@ MonoBehaviour:
   hunted: {fileID: -1585299067819555212, guid: 6fc5c4a1809ae65459d55a429dbedbeb, type: 3}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
   score: {fileID: 1374657369814451255, guid: 9c9ba96ab5571414dbe6c40aaf02a3fd, type: 3}
+  dead: {fileID: 8300000, guid: 9a928c9c44998a940b9d6a8cb43262b7, type: 3}
+  hurtAudio: {fileID: 8300000, guid: 2656e3800a562a94199a4f2a1ce02e25, type: 3}
+  birdCollision: {fileID: 8300000, guid: 43265160311ec01479a8f9b11a464dcd, type: 3}
 --- !u!50 &3093662744693244560
 Rigidbody2D:
   serializedVersion: 4
