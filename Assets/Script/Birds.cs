@@ -17,7 +17,7 @@ public class Birds : MonoBehaviour
     public LineRenderer lrLeft;
     public GameObject boom;
 
-    private Trail myTrail;
+    protected Trail myTrail;
     private bool canMove = true;
     private float smooth = 3;
 
@@ -27,7 +27,7 @@ public class Birds : MonoBehaviour
     private bool isFly = false;
 
     public Sprite hurt;
-    private SpriteRenderer render;
+    protected SpriteRenderer render;
 
 
     private void Awake()
@@ -124,7 +124,7 @@ public class Birds : MonoBehaviour
     /// <summary>
     /// 下一只小鸟飞出
     /// </summary>
-    void Next() 
+    protected virtual void Next() 
     {
         GameManager._instance.birds.Remove(this);
         Destroy(gameObject);

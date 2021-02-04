@@ -990,6 +990,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b8810aaacb2a7041b1caacb963b10bd, type: 3}
+--- !u!4 &456544959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+  m_PrefabInstance: {fileID: 1484443785138410215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &456544966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 456544966, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+  m_PrefabInstance: {fileID: 1484443785138410215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8567576e5e8b1b41b8206f4dc322a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &487801043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birds:
   - {fileID: 1645114563}
+  - {fileID: 456544966}
   - {fileID: 309819724}
   - {fileID: 1979472518}
   pigs:
@@ -3838,6 +3855,7 @@ Transform:
   - {fileID: 1645114562}
   - {fileID: 309819718}
   - {fileID: 1979472517}
+  - {fileID: 456544959}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6510,6 +6528,99 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c906b1dc0e7254449ecf51af058d3c7, type: 3}
+--- !u!1001 &1484443785138410215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1313961776}
+    m_Modifications:
+    - target: {fileID: 456544961, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456544966, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: lrLeft
+      value: 
+      objectReference: {fileID: 1158469693}
+    - target: {fileID: 456544966, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: leftPos
+      value: 
+      objectReference: {fileID: 1158469692}
+    - target: {fileID: 456544966, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: lrRight
+      value: 
+      objectReference: {fileID: 835676160}
+    - target: {fileID: 456544966, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: rightPos
+      value: 
+      objectReference: {fileID: 835676159}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.20319211
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693304, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693310, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_Radius
+      value: 0.89960706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693310, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.007400329
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693310, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693316, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_Name
+      value: Black-BIRDS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650838318690693317, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 784716847}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d906d6a5eef55f749a17837c503bcfcb, type: 3}
 --- !u!1001 &3093662745518054909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6621,6 +6732,10 @@ PrefabInstance:
     - target: {fileID: 3276546542488426462, guid: ad037cd8d3cb84c498315a1b4486686f, type: 3}
       propertyPath: m_Name
       value: Pig
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276546542488426462, guid: ad037cd8d3cb84c498315a1b4486686f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad037cd8d3cb84c498315a1b4486686f, type: 3}
