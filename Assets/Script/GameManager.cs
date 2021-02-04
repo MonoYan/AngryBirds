@@ -80,6 +80,10 @@ public class GameManager : MonoBehaviour
     IEnumerator Show() {
         for (int i = 0; i < birds.Count ; i++)
         {
+            if (i >= stars.Length)
+            {
+                break;
+            }
             yield return new WaitForSeconds(0.2f);
             stars[i].SetActive(true);
         }
