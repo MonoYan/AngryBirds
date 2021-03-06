@@ -7,7 +7,8 @@ public class MapSelect : MonoBehaviour
     public int startNum = 0;
     public bool isSelect = false;
 
-    public GameObject locks, starts;
+    public GameObject locks, starts, panel, map;
+
 
     private void Start()
     {
@@ -22,6 +23,17 @@ public class MapSelect : MonoBehaviour
         {
             locks.SetActive(false);
             starts.SetActive(true);
+        }
+    }
+    /// <summary>
+    /// MouseClick
+    /// </summary>
+    public void Selected() 
+    {
+        if (isSelect)
+        {
+            panel.SetActive(true);
+            map.SetActive(false);
         }
     }
 }
