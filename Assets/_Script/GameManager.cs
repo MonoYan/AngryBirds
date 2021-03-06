@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject win;
     public GameObject lose;
 
+    int startsNum;
+
     private void Awake()
     {
         _instance = this;
@@ -31,19 +33,19 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Initialized()
     {
-        for (int i = 0; i < birds.Count; i++)
+        for (; startsNum < birds.Count; startsNum++)
         {
-            if (i == 0)
+            if (startsNum == 0)
             {
-                birds[i].transform.position = originPos;
-                birds[i].enabled = true;
-                birds[i].sj.enabled = true;
+                birds[startsNum].transform.position = originPos;
+                birds[startsNum].enabled = true;
+                birds[startsNum].sj.enabled = true;
             }
 
             else
             {
-                birds[i].enabled = false;
-                birds[i].sj.enabled = false;
+                birds[startsNum].enabled = false;
+                birds[startsNum].sj.enabled = false;
             }
         }
     }
@@ -91,11 +93,17 @@ public class GameManager : MonoBehaviour
 
     public void Replay() 
     {
-        SceneManager.LoadScene(2);
-        
+        SceneManager. LoadScene(2);
+        SaveStartData();
     }
 
     public void Home() {
+        SaveStartData();
         SceneManager.LoadScene(1);
+    }
+
+    public void SaveStartData() 
+    {
+        PlayerPrefs.SetInt(PlayerPrefs.GetString("now level"),startsNum);
     }
 }

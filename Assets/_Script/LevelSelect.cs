@@ -25,4 +25,12 @@ public class LevelSelect : MonoBehaviour
             transform.Find("Num").gameObject.SetActive(true);
         }
     }
+
+    public void Selected() 
+    {
+        if (isSelect)
+        {
+            PlayerPrefs.SetString("now level", "level" + gameObject.name);
+        }
+    }
 }

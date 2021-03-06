@@ -23,6 +23,8 @@ public class MapSelect : MonoBehaviour
         {
             locks.SetActive(false);
             starts.SetActive(true);
+
+            //TODO:text显示
         }
     }
     /// <summary>
