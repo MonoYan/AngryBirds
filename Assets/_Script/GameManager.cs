@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public List<Birds> birds;
     public List<Pig> pigs;
+
     public GameObject[] stars;
     public static GameManager _instance;
     private Vector3 originPos; //初始化的位置
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject win;
     public GameObject lose;
 
-    int startsNum;
+    private int startsNum = 0;
 
     private void Awake()
     {
@@ -33,19 +34,19 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Initialized()
     {
-        for (; startsNum < birds.Count; startsNum++)
+        for (int i = 0; i < birds.Count; i++)
         {
-            if (startsNum == 0)
+            if (i == 0)
             {
-                birds[startsNum].transform.position = originPos;
-                birds[startsNum].enabled = true;
-                birds[startsNum].sj.enabled = true;
+                birds[i].transform.position = originPos;
+                birds[i].enabled = true;
+                birds[i].sj.enabled = true;
             }
 
             else
             {
-                birds[startsNum].enabled = false;
-                birds[startsNum].sj.enabled = false;
+                birds[i].enabled = false;
+                birds[i].sj.enabled = false;
             }
         }
     }
@@ -80,14 +81,14 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator Show() {
-        for (int i = 0; i < birds.Count ; i++)
+        for (; startsNum < birds.Count ; startsNum++)
         {
-            if (i >= stars.Length)
+            if (startsNum >= stars.Length)
             {
                 break;
             }
             yield return new WaitForSeconds(0.2f);
-            stars[i].SetActive(true);
+            stars[startsNum].SetActive(true);
         }
     }
 

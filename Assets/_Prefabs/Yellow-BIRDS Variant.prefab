@@ -59,6 +59,7 @@ MonoBehaviour:
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
   select: {fileID: 8300000, guid: 6f8ab9bcc561b3f4b9515a9a06e1af51, type: 3}
   fly: {fileID: 8300000, guid: 31431c8dca3ccf14ea09281edbb49216, type: 3}
+  hurt: {fileID: -8330303365068641620, guid: efff5e452cd141b428bc7679fbc1de63, type: 3}
 --- !u!1001 &5415148404221029032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,15 +101,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.49
+      value: -6.41
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.14
+      value: -3.17
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.20319211
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -116,15 +117,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375189, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -142,6 +143,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1053045206675343816, guid: efff5e452cd141b428bc7679fbc1de63, type: 3}
+    - target: {fileID: 9107357663852375190, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9107357663852375272, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
@@ -150,7 +155,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow-BIRDS Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9107357663852375188, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a43ff4bf3dd0a2040abd91968a5f2c99, type: 3}
 --- !u!1 &3838664759398630977 stripped
 GameObject:

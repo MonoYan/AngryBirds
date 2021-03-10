@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
 {
@@ -30,7 +31,9 @@ public class LevelSelect : MonoBehaviour
     {
         if (isSelect)
         {
-            PlayerPrefs.SetString("now level", "level" + gameObject.name);
+            PlayerPrefs.SetString("nowlevel", "Level" + gameObject.name);
+            //print(PlayerPrefs.GetString("nowlevel"));
+            SceneManager.LoadScene(2);
         }
     }
 }
