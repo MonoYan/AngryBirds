@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     private int startsNum = 0;
 
+    private int totalLevelNum = 10;
     private void Awake()
     {
         _instance = this;
@@ -105,6 +106,17 @@ public class GameManager : MonoBehaviour
 
     public void SaveStartData() 
     {
-        PlayerPrefs.SetInt(PlayerPrefs.GetString("nowlevel"),startsNum);
+        if (startsNum > PlayerPrefs.GetInt(PlayerPrefs.GetString("nowlevel")))
+        {
+            PlayerPrefs.SetInt(PlayerPrefs.GetString("nowlevel"), startsNum);
+        }
+        //储存星星的个数
+        int sum = 0;
+        for (int i = 1; i < totalLevelNum; i++)
+        {
+            sum += PlayerPrefs.GetInt(PlayerPrefs.GetString("level") + i.ToString());
+        }
+
+        PlayerPrefs.SetInt("totalNum", sum);
     }
 }
