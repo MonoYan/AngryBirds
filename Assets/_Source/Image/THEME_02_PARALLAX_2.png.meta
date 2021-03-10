@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 07b53dd254e7d024ea229e1ce698f9fd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3735013341838613996
+    second: THEME_02_PARALLAX_2_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -87,7 +90,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: THEME_02_PARALLAX_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 346
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4126d5097219a2cc0800000000000000
+      internalID: -3735013341838613996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
