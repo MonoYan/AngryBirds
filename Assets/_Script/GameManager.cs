@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator Show() {
-        for (; startsNum < birds.Count ; startsNum++)
+        for (; startsNum < birds.Count + 1; startsNum++)
         {
             if (startsNum >= stars.Length)
             {
@@ -105,6 +105,6 @@ public class GameManager : MonoBehaviour
 
     public void SaveStartData() 
     {
-        PlayerPrefs.SetInt(PlayerPrefs.GetString("now level"),startsNum);
+        PlayerPrefs.SetInt(PlayerPrefs.GetString("nowlevel"),startsNum);
     }
 }
