@@ -21,6 +21,18 @@ public class LevelSelect : MonoBehaviour
         {
             isSelect = true;
         }
+        else 
+        {
+            int beforeNum = int.Parse(gameObject.name) - 1;
+            
+            if (PlayerPrefs.GetInt("Level" + beforeNum.ToString()) > 0)
+            {
+                print("beforeNum: " + beforeNum);
+                isSelect = true;
+            }
+        }
+
+
         if (isSelect)
         {
             image.overrideSprite = levelBg;
