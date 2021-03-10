@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         _instance = this;
         if (birds.Count > 0) { originPos = birds[0].transform.position; }
-        
+        SaveStartData();
     }
 
     private void Start()
@@ -114,9 +114,10 @@ public class GameManager : MonoBehaviour
         int sum = 0;
         for (int i = 1; i < totalLevelNum; i++)
         {
-            sum += PlayerPrefs.GetInt(PlayerPrefs.GetString("level") + i.ToString());
+            sum += PlayerPrefs.GetInt("Level" + i.ToString());
         }
 
         PlayerPrefs.SetInt("totalNum", sum);
+        
     }
 }

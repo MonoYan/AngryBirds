@@ -27,7 +27,6 @@ public class LevelSelect : MonoBehaviour
             
             if (PlayerPrefs.GetInt("Level" + beforeNum.ToString()) > 0)
             {
-                print("beforeNum: " + beforeNum);
                 isSelect = true;
             }
         }
@@ -39,7 +38,7 @@ public class LevelSelect : MonoBehaviour
             transform.Find("Num").gameObject.SetActive(true);
 
             int count = PlayerPrefs.GetInt("Level" + gameObject.name);//获取现在关卡对应的名字，获得其星星的个数
-            print(count);
+            
             if (count > 0)
             {
                 for (int i = 0; i < count; i++)

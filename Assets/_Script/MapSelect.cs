@@ -15,6 +15,7 @@ public class MapSelect : MonoBehaviour
         //存储每一关的星星数量，计算总和
         
         if (PlayerPrefs.GetInt("totalNum", 0) >= startNum)
+
         {
             isSelect = true;
         }
@@ -37,5 +38,11 @@ public class MapSelect : MonoBehaviour
             panel.SetActive(true);
             map.SetActive(false);
         }
+    }
+
+    public void ReturnSelect()
+    {
+        panel.SetActive(false);
+        map.SetActive(true);
     }
 }
