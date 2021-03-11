@@ -246,10 +246,8 @@ MonoBehaviour:
   lrRight: {fileID: 195043060462204762}
   lrLeft: {fileID: 195043060238773713}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
-  canMove: 0
   select: {fileID: 8300000, guid: 6f8ab9bcc561b3f4b9515a9a06e1af51, type: 3}
   fly: {fileID: 8300000, guid: 31431c8dca3ccf14ea09281edbb49216, type: 3}
-  isReleased: 0
   hurt: {fileID: 8669725828687014486, guid: efff5e452cd141b428bc7679fbc1de63, type: 3}
 --- !u!114 &195043059197925147
 MonoBehaviour:
@@ -24070,7 +24068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.43137255}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -24966,10 +24964,8 @@ MonoBehaviour:
   lrRight: {fileID: 195043060462204762}
   lrLeft: {fileID: 195043060238773713}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
-  canMove: 0
   select: {fileID: 8300000, guid: 6f8ab9bcc561b3f4b9515a9a06e1af51, type: 3}
   fly: {fileID: 8300000, guid: 31431c8dca3ccf14ea09281edbb49216, type: 3}
-  isReleased: 0
   hurt: {fileID: -8330303365068641620, guid: efff5e452cd141b428bc7679fbc1de63, type: 3}
 --- !u!1 &195043060445627215
 GameObject:
@@ -31908,7 +31904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -32279,10 +32275,8 @@ MonoBehaviour:
   lrRight: {fileID: 195043060462204762}
   lrLeft: {fileID: 195043060238773713}
   boom: {fileID: 2766739984224514020, guid: 423316cc63db66d44b6060d4e6e30f46, type: 3}
-  canMove: 0
   select: {fileID: 8300000, guid: 6f8ab9bcc561b3f4b9515a9a06e1af51, type: 3}
   fly: {fileID: 8300000, guid: 31431c8dca3ccf14ea09281edbb49216, type: 3}
-  isReleased: 0
   hurt: {fileID: 8669725828687014486, guid: efff5e452cd141b428bc7679fbc1de63, type: 3}
 --- !u!114 &195043061109304977
 MonoBehaviour:
