@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Birds : MonoBehaviour
 {
@@ -18,13 +19,15 @@ public class Birds : MonoBehaviour
     public GameObject boom;
 
     protected Trail myTrail;
-    private bool canMove = true;
+    [HideInInspector]
+    public bool canMove = false;
     private float smooth = 3;
 
     public AudioClip select;
     public AudioClip fly;
 
     private bool isFly = false;
+    public bool isReleased = false;
 
     public Sprite hurt;
     protected SpriteRenderer render;
@@ -65,6 +68,11 @@ public class Birds : MonoBehaviour
 
     private void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (isCLick)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition); //坐标系转换
@@ -100,6 +108,7 @@ public class Birds : MonoBehaviour
     /// </summary>
     void Fly() //使SpriteJoint失活达到飞行功能   
     {
+        isReleased = true;
         isFly = true;
         AudioPlay(fly);
         myTrail.StartTrail(); //飞行时播放特效

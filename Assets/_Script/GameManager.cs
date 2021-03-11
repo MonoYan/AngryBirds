@@ -42,12 +42,14 @@ public class GameManager : MonoBehaviour
                 birds[i].transform.position = originPos;
                 birds[i].enabled = true;
                 birds[i].sj.enabled = true;
+                birds[i].canMove = true;
             }
 
             else
             {
                 birds[i].enabled = false;
                 birds[i].sj.enabled = false;
+                birds[i].canMove = false;
             }
         }
     }

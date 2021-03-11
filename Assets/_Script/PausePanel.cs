@@ -26,7 +26,14 @@ public class PausePanel : MonoBehaviour
         //播放动画
         anim.SetBool("isPause", true);
         button.SetActive(false);
-        
+
+        if (GameManager._instance.birds.Count > 0)
+        {
+            if (GameManager._instance.birds[0].isReleased == false)
+            {
+                GameManager._instance.birds[0].canMove = false;
+            }
+        }
     }
     /// <summary>
     /// 点击Home按钮
@@ -43,6 +50,13 @@ public class PausePanel : MonoBehaviour
         Time.timeScale = 1;
         anim.SetBool("isPause", false);
 
+        if (GameManager._instance.birds.Count > 0)
+        {
+            if (GameManager._instance.birds[0].isReleased == false)
+            {
+                GameManager._instance.birds[0].canMove = true;
+            }
+        }
     }
 
     /// <summary>
